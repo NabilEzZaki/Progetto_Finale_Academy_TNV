@@ -32,7 +32,7 @@ export class LoginService {
 
   public login(usernameAuth: string, passwordAuth: string){
     const headers=new HttpHeaders({
-      Authorization : 'Basic '+ btoa(usernameAuth+":"+passwordAuth)});  //btoa= binari to ask
+      Authorization : 'Basic '+ btoa(usernameAuth+":"+passwordAuth)});  
     return this.http.get<any>(this.loginUrl + "/", {headers, responseType:'text' as 'json'}).pipe(map(
         userData => {
          sessionStorage.setItem('username',usernameAuth);
@@ -42,10 +42,57 @@ export class LoginService {
       );
   }
 
+ //verifica se utente è loggato 
+
+
+//logout utente
   logOut() {
     sessionStorage.removeItem('username')
   }
 
+  //verificare lista di utenti presenti nel db
+  public getUsers(usernameAuth:string, passwordAuth:string){
+    const headers = new HttpHeaders({
+      'Content-Type':  'application/json',
+      Authorization : 'Basic '+ btoa(usernameAuth+":"+passwordAuth)});
+    return this.http.get<Array<LoginInfo>>(this.loginUrl + "/", {headers});
+    }
+
+  //preleva utente con id 
+  public getUsersById(id: number, usernameAuth:string, passwordAuth:string){
+    const headers = new HttpHeaders({
+      'Content-Type':  'application/json',
+      Authorization : 'Basic '+ btoa(usernameAuth+":"+passwordAuth)});
+      return this.http.get<LoginInfo>(this.loginUrl + "/" + id, {headers});
+    }
+
+    //preleva utente con username
+    public getUserByUsername(username : string, usernameAuth:string, passwordAuth:string){
+      const headers = new HttpHeaders({
+        'Content-Type':  'application/json',
+        Authorization : 'Basic '+ btoa(usernameAuth+":"+passwordAuth)});
+      return this.http.get<LoginInfo>(this.loginUrl + "/username/" + username, {headers});
+    }
+
+    //update dati utente
+    updateUser =(userId:number, newUser : LoginInfo, username:string, password:string) => {
+      const headers=new HttpHeaders({
+        'Content-Type':  'application/json',
+        Authorization : 'Basic '+ btoa(username+":"+password)});  //btoa= binari to ask
+      return this.http.put<LoginInfo>(this.loginUrl +"/" +userId, JSON.stringify({
+      "username": newUser.username,
+      "password": newUser.password,
+      "enabled": newUser.enabled,
+      }),{headers})
+    }
+
+    //delete utente
+    deleteUser(id: number, usernameAuth:string, passwordAuth:string ){
+      const headers = new HttpHeaders({
+        'Content-Type':  'application/json',
+        Authorization : 'Basic '+ btoa(usernameAuth+":"+passwordAuth)});
+      return this.http.delete(this.loginUrl + "/"+id, {headers});
+    }
   }
 
 
@@ -53,19 +100,8 @@ export class LoginService {
 
 
 
-  /*
-  attemptAuth(credentials: LoginInfo): Observable<Response> {
-    return this.http.post<Response>(this.loginUrl, credentials, httpOptionsLogin);
-  }
-  signUp(info: RegisterInfo): Observable<string> {
-    return this.http.post<string>(this.registerUrl, info, httpOptions);
-  }
-  getUserIdByUsername(username: String) {
-    return this.http.get<any>(this.getUserIdByUsername + "/" + username);
-  }
-  getAll() {
-    return this.http.get<any>(this.getAllUserUrl);
-  }*/
+
+ 
 
 
 

@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 
 import { LoginComponent } from './components/login-componets/login.component';
 import { LoginPageComponent } from './routes/login-page/login-page.component';
-import { RegistrationComponent } from './routes/register/registration/registration.component';
+
 
 
 
@@ -16,7 +16,7 @@ import { RegistrationComponent } from './routes/register/registration/registrati
     AppComponent,
     LoginComponent,
     LoginPageComponent,
-    RegistrationComponent
+  
 
   ],
   imports: [
