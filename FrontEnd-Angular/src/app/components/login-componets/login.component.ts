@@ -2,7 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginInfo } from 'src/app/models/login-model/login-info';
 import { LoginService } from 'src/app/services/login/login.service';
+import { AthenticationService } from 'src/app/services/authentication/athentication.service';
 
 
 @Component({
@@ -12,35 +14,18 @@ import { LoginService } from 'src/app/services/login/login.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor( private loginService : LoginService, private router : Router) { }
+  constructor( private loginService : LoginService, private router : Router, private loginAuth : AthenticationService ) { }
  
+    
   
 
   ngOnInit(): void {
    
   }
 
-  login(loginForm: NgForm) {
-    console.log(loginForm.value);
-  }
 
 
 
-/*
-  createUser(loginForm: NgForm){
-    this.httpClient.post(`http://localhost:8080/login/adduser `, loginForm.value).subscribe({
-      next: () => console.log('utente creato'),
-      error: () => console.log('error')
-      
-    });
-  }
-
- /* login() {
-    this.loginSer.authenticate(this.credentials, () => {
-        this.router.navigateByUrl('/');
-    });
-    return false;
-  }*/
 
   
 

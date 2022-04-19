@@ -5,7 +5,7 @@ import { map, Observable } from 'rxjs';
 import { LoginInfo } from 'src/app/models/login-model/login-info';
 import { RegisterInfo } from 'src/app/models/login-model/register-info';
 
-/*
+
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
@@ -16,16 +16,20 @@ const httpOptionsLogin = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
   })
-}; */
+}; 
+
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
   private loginUrl = "http://localhost:8080/login";
+  
+  /*
   private registerUrl = "http://localhost:8080/login/adduser";
   private getIdUrl = "http://localhost:8080/login/id";
   private getAllUserUrl = "http://localhost:8080/login/";
+*/
 
   constructor(private http: HttpClient) { }
 
@@ -42,7 +46,12 @@ export class LoginService {
       );
   }
 
- //verifica se utente è loggato 
+ //verifica se l'utente è loggato
+ isUserLoggedIn() {
+  let user = sessionStorage.getItem('username')
+  //console.log(!(user === null))
+  return !(user === null)
+}
 
 
 //logout utente
