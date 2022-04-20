@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+.canva{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./photo_2022-04-12_11-53-31.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.offcanvas{
+    background: rgb(153, 153, 155);
+}
+.btn-close:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon{
+    font-size: 40px;
+    color: white;    
+}
+
+.navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+
+}
+
+.navbar-brand{
+    color: rgb(191, 209, 161);
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.navbar-brand:hover{
+    color: white;
+}
+
+.navbar-nav{
+    text-decoration: none;
+    color: rgb(228, 220, 220);
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+.navbar-nav a:hover{
+    color: rgb(235, 42, 42);
+}
+
+.btn1{
+    height: 45px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgba(28,31,56,0.657);
+    font-weight: 500;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+
+}
+.btn1::before,
+.btn1::after{
+    position: absolute;
+    content: "";
+    z-index: -1;
+}
+
+.btn1::after{
+    height: 0;
+    top: 0;
+    left: 0;
+    transition-duration: 0.5s;
+    width: 100%;
+
+}
+
+.btn1:hover::after{
+    height: 100%;
+    background: red;
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(157, 170, 84);
+    text-align: center;
+}
+.content h1{
+    font-size: 4rem;
+}
+.content input{
+    height: 65px;
+    width: 50%;
+    background: rgb(238, 224, 224);
+    padding: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+.btn2{
+    height: 45px;
+    width: 150px;
+    color: rgb(234, 234, 243);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.5s;
+    background-color: rgb(155, 150, 150);
+    margin-left: -165px;
+}
+
+.btn2:hover{
+    background-color: red;
+}
+
