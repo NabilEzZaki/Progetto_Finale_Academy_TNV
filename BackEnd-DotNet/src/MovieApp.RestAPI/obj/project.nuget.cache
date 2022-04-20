@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pr4NbDhQbJBlkwerfBbrnJecs5vCPYdMo08OhFYULDYHBy44L6GGI8X1nI2uqVtDsVIVxITt4+1YtFNj6vNNsA==",
+  "dgSpecHash": "83zNW8H7abAZ/wLl6IModaf+cit58mvDvtk208SjV4+BVHOEBMz4mn/yGZgnO7vkjlgfa7PIk3/5A8db9UOX7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\karli\\Downloads\\Telegram Desktop\\movieApp finale\\prgMovieApp\\MovieApp\\src\\MovieApp.RestAPI\\MovieApp.RestAPI.csproj",
+  "projectFilePath": "C:\\Users\\karli\\OneDrive\\Desktop\\Node.js\\Progetto_Finale_TNV\\Progetto_Finale_Academy_TNV\\BackEnd-DotNet\\src\\MovieApp.RestAPI\\MovieApp.RestAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\karli\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\karli\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
