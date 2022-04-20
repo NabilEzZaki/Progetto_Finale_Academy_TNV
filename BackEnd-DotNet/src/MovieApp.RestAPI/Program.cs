@@ -34,6 +34,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("Policyl");
+
 app.UseAuthorization();
 
 app.MapControllers();
