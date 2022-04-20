@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { LoginInfo } from 'src/app/models/login-model/login-info';
 import { RegisterInfo } from 'src/app/models/login-model/register-info';
+
 
 
 const httpOptions = {
@@ -16,24 +17,24 @@ const httpOptionsLogin = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
   })
-}; 
+};
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  private loginUrl = "http://localhost:8080/login";
+  private loginUrl = 'http://localhost:8080/login';
   
-  /*
+  
   private registerUrl = "http://localhost:8080/login/adduser";
-  private getIdUrl = "http://localhost:8080/login/id";
-  private getAllUserUrl = "http://localhost:8080/login/";
-*/
-
-  constructor(private http: HttpClient) { }
+  private getIdUrl = "http://localhost:8080/login/{id}";
+  private getAllUserUrl = "http://localhost:8080/login/allusers";
 
 
+  constructor(private httpClient: HttpClient) { }
+
+/*
   public login(usernameAuth: string, passwordAuth: string){
     const headers=new HttpHeaders({
       Authorization : 'Basic '+ btoa(usernameAuth+":"+passwordAuth)});  
@@ -44,7 +45,7 @@ export class LoginService {
         }
       )
       );
-  }
+  }*/
 
  //verifica se l'utente è loggato
  isUserLoggedIn() {
@@ -59,6 +60,24 @@ export class LoginService {
     sessionStorage.removeItem('username')
   }
 
+  attemptAuth(credentials: LoginInfo): Observable<LoginInfo> {
+    return this.httpClient.post<LoginInfo>(this.loginUrl, credentials, httpOptionsLogin);
+  }
+
+  getUserIdByUsername(username: String) {
+    return this.httpClient.get<LoginInfo>(this.getIdUrl + "/" + username);
+  }
+
+  getAll() {
+    return this.httpClient.get<LoginInfo[]>(`http://localhost:8080/login/allusers`);
+  }
+  
+  getUserById(id : number|null){
+    return this.httpClient.get<LoginInfo>(`http://localhost:8080/login/${id}`)
+  }
+
+
+  /*
   //verificare lista di utenti presenti nel db
   public getUsers(usernameAuth:string, passwordAuth:string){
     const headers = new HttpHeaders({
@@ -102,6 +121,8 @@ export class LoginService {
         Authorization : 'Basic '+ btoa(usernameAuth+":"+passwordAuth)});
       return this.http.delete(this.loginUrl + "/"+id, {headers});
     }
+    */
+
   }
 
 

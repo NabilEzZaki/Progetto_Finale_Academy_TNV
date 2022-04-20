@@ -13,6 +13,9 @@ export class AthenticationService {
 
   constructor(private router: Router, private loginservice: LoginService) { }
 
+  ngOnInit() {
+  }
+/*
   checkLogin() {
     (this.loginservice.login(this.username, this.password).subscribe(
       data => {
@@ -27,7 +30,7 @@ export class AthenticationService {
     );
 
   }
-
+*/
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (this.loginservice.isUserLoggedIn())
       return true;

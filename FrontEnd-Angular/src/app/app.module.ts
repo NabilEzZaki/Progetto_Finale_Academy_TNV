@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 
 import { LoginComponent } from './components/login-componets/login.component';
 import { LoginPageComponent } from './routes/login-page/login-page.component';
+import { OnPageComponent } from './routes/onPage/on-page/on-page.component';
 
 
 
@@ -16,6 +17,7 @@ import { LoginPageComponent } from './routes/login-page/login-page.component';
     AppComponent,
     LoginComponent,
     LoginPageComponent,
+    OnPageComponent,
   
 
   ],
