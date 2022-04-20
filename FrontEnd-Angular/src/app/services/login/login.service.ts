@@ -25,8 +25,6 @@ const httpOptionsLogin = {
 export class LoginService {
 
   private loginUrl = 'http://localhost:8080/login';
-  
-  
   private registerUrl = "http://localhost:8080/login/adduser";
   private getIdUrl = "http://localhost:8080/login/{id}";
   private getAllUserUrl = "http://localhost:8080/login/allusers";

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2BlJ8eAOR4NR0X85pWXF++90l9LmVTwrdNK0UOrvFfuA/CtMyw1MUFaFSK7mX/d6GSayEAySzSTh1STYVA7xSA==",
+  "dgSpecHash": "4tufszDK3JzJvkNKH8yMdPxJhQbs6PxEJ/dOGK8WFd5uKBoYmETnfSPjHsf+Eier6bu4UIVv+oiz9v/AznObtA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\karli\\Downloads\\Telegram Desktop\\movieApp finale\\prgMovieApp\\MovieApp\\src\\MovieApp.DB\\MovieApp.DB.csproj",
+  "projectFilePath": "C:\\Users\\karli\\OneDrive\\Desktop\\Node.js\\Progetto_Finale_TNV\\Progetto_Finale_Academy_TNV\\BackEnd-DotNet\\src\\MovieApp.DB\\MovieApp.DB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\karli\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\karli\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.1\\microsoft.entityframeworkcore.6.0.1.nupkg.sha512",

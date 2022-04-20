@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\karli\\Downloads\\Telegram Desktop\\movieApp finale\\prgMovieApp\\MovieApp\\src\\MovieApp.Core\\MovieApp.Core.csproj": {}
+    "C:\\Users\\karli\\OneDrive\\Desktop\\Node.js\\Progetto_Finale_TNV\\Progetto_Finale_Academy_TNV\\BackEnd-DotNet\\src\\MovieApp.Core\\MovieApp.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\karli\\Downloads\\Telegram Desktop\\movieApp finale\\prgMovieApp\\MovieApp\\src\\MovieApp.Core\\MovieApp.Core.csproj": {
+    "C:\\Users\\karli\\OneDrive\\Desktop\\Node.js\\Progetto_Finale_TNV\\Progetto_Finale_Academy_TNV\\BackEnd-DotNet\\src\\MovieApp.Core\\MovieApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\karli\\Downloads\\Telegram Desktop\\movieApp finale\\prgMovieApp\\MovieApp\\src\\MovieApp.Core\\MovieApp.Core.csproj",
+        "projectUniqueName": "C:\\Users\\karli\\OneDrive\\Desktop\\Node.js\\Progetto_Finale_TNV\\Progetto_Finale_Academy_TNV\\BackEnd-DotNet\\src\\MovieApp.Core\\MovieApp.Core.csproj",
         "projectName": "MovieApp.Core",
-        "projectPath": "C:\\Users\\karli\\Downloads\\Telegram Desktop\\movieApp finale\\prgMovieApp\\MovieApp\\src\\MovieApp.Core\\MovieApp.Core.csproj",
+        "projectPath": "C:\\Users\\karli\\OneDrive\\Desktop\\Node.js\\Progetto_Finale_TNV\\Progetto_Finale_Academy_TNV\\BackEnd-DotNet\\src\\MovieApp.Core\\MovieApp.Core.csproj",
         "packagesPath": "C:\\Users\\karli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\karli\\Downloads\\Telegram Desktop\\movieApp finale\\prgMovieApp\\MovieApp\\src\\MovieApp.Core\\obj\\",
+        "outputPath": "C:\\Users\\karli\\OneDrive\\Desktop\\Node.js\\Progetto_Finale_TNV\\Progetto_Finale_Academy_TNV\\BackEnd-DotNet\\src\\MovieApp.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\karli\\AppData\\Roaming\\NuGet\\NuGet.Config",
