@@ -68,12 +68,12 @@ export class LoginService {
     return this.httpClient.get<LoginInfo>(this.getIdUrl + "/" + username);
   }
 
-  getAll() {
+  getAll() : Observable<LoginInfo[]> {
     return this.httpClient.get<LoginInfo[]>(`http://localhost:8080/login/allusers`);
   }
   
   getUserById(id : number|null){
-    return this.httpClient.get<LoginInfo>(`http://localhost:8080/login/${id}`)
+    return this.httpClient.get<LoginInfo>(`http://localhost:8080/login/${id}`);
   }
 
 

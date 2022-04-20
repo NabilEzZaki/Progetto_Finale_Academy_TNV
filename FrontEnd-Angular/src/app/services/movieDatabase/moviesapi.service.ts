@@ -8,7 +8,7 @@ import { MovieApiInterface } from 'src/app/models/movieModel/apiMovieModel';
 export class MoviesApiService {
 
     private baseURL = 'https://api.themoviedb.org';
-    private apiKey = "";
+    private apiKey = "3949444e64e7a9355250d3b1b5c59bf1";
 
     constructor( private http : HttpClient) { }
 
@@ -29,6 +29,6 @@ export class MoviesApiService {
     getMovieByTitle(ricercaTitolo:string){
       return this.http.get<MovieApiInterface>(this.baseURL+"/3/search/movie?api_key="+this.apiKey+"&query="+ricercaTitolo);
     }
-    //https://api.themoviedb.org/3/search/movie?api_key=d5ac4153b7b34b3ef31b49edd9731e04&query='title'
+    //https://api.themoviedb.org/3/search/movie?api_key=3949444e64e7a9355250d3b1b5c59bf1&query='title'
 
 }

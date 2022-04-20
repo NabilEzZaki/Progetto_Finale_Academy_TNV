@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login-componets/login.component';
 import { LoginPageComponent } from './routes/login-page/login-page.component';
 import { OnPageComponent } from './routes/onPage/on-page/on-page.component';
+import { MovieDatabaseListComponent } from './routes/movieDatabaseList/movie-database-list/movie-database-list.component';
 
 
 
@@ -18,6 +19,7 @@ import { OnPageComponent } from './routes/onPage/on-page/on-page.component';
     LoginComponent,
     LoginPageComponent,
     OnPageComponent,
+    MovieDatabaseListComponent,
   
 
   ],
