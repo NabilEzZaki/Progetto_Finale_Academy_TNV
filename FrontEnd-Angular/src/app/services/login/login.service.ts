@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 import { LoginInfo } from 'src/app/models/login-model/login-info';
 import { RegisterInfo } from 'src/app/models/login-model/register-info';
@@ -24,7 +24,7 @@ const httpOptionsLogin = {
 })
 export class LoginService {
 
-  private loginUrl = 'http://localhost:8080/login';
+  private loginUrl = 'http://localhost:8080/login/';
   private registerUrl = "http://localhost:8080/login/adduser";
   private getIdUrl = "http://localhost:8080/login/{id}";
   private getAllUserUrl = "http://localhost:8080/login/allusers";
@@ -36,14 +36,14 @@ export class LoginService {
   public login(usernameAuth: string, passwordAuth: string){
     const headers=new HttpHeaders({
       Authorization : 'Basic '+ btoa(usernameAuth+":"+passwordAuth)});  
-    return this.http.get<any>(this.loginUrl + "/", {headers, responseType:'text' as 'json'}).pipe(map(
+    return this.httpClient.get<any>(this.loginUrl + "/", {headers, responseType:'text' as 'json'}).pipe(map(
         userData => {
          sessionStorage.setItem('username',usernameAuth);
          return userData;
         }
       )
       );
-  }*/
+  }
 
  //verifica se l'utente è loggato
  isUserLoggedIn() {
@@ -75,15 +75,15 @@ export class LoginService {
   }
 
 
-  /*
+  
   //verificare lista di utenti presenti nel db
   public getUsers(usernameAuth:string, passwordAuth:string){
     const headers = new HttpHeaders({
       'Content-Type':  'application/json',
       Authorization : 'Basic '+ btoa(usernameAuth+":"+passwordAuth)});
-    return this.http.get<Array<LoginInfo>>(this.loginUrl + "/", {headers});
+    return this.httpClient.get<Array<LoginInfo>>(this.loginUrl + "/", {headers});
     }
-
+/*
   //preleva utente con id 
   public getUsersById(id: number, usernameAuth:string, passwordAuth:string){
     const headers = new HttpHeaders({

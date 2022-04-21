@@ -9,7 +9,7 @@ import { OnPageComponent } from './routes/onPage/on-page/on-page.component';
 const routes: Routes = [
   { path: "", redirectTo: '/welcome', pathMatch: 'full'},
   { path: "welcome", component: OnPageComponent},
-  { path: "login", component: LoginPageComponent},
+  { path: "login", component: LoginComponent},
   { path: "login/allusers", component: LoginComponent},
   { path: "login/id", component: LoginComponent},
   { path: "movie", component: CommentsComponent },
