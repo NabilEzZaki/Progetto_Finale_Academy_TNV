@@ -1,1 +1,4 @@
 <p>movie-api works!</p>
+<form #movieForm="ngForm" (submit)="getMovieList(movieForm)">
+    <button type="submit">list Movie</button>
+  </form>

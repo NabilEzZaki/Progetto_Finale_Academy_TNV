@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { movieDB } from 'src/app/models/movieModel/movieDB';
+import { movieDB } from 'src/app/models/model-node/movieDB';
 
 
 
