@@ -24,10 +24,5 @@ export class MoviesApiService {
         return this.http.get<MovieApiInterface>(this.baseURL+"list/2?api_key="+this.apiKey);
     }
 
-    //Restituisce i film in base al titolo o a una porzione di titolo passato come parametro
-    getMovieByTitle(ricercaTitolo:string){
-      return this.http.get<MovieApiInterface>(this.baseURL+"/3/search/movie?api_key="+this.apiKey+"&query="+ricercaTitolo);
-    }
-    //https://api.themoviedb.org/3/search/movie?api_key=3949444e64e7a9355250d3b1b5c59bf1&query='title'
 
 }

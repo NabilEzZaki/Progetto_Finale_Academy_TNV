@@ -10,6 +10,7 @@ import { LoginPageComponent } from './routes/login-page/login-page.component';
 import { OnPageComponent } from './routes/onPage/on-page/on-page.component';
 import { MovieDatabaseListComponent } from './routes/movieDatabaseList/movie-database-list/movie-database-list.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { RatingComponent } from './components/rating/rating.component';
 
 
 
@@ -22,6 +23,7 @@ import { CommentsComponent } from './components/comments/comments.component';
     OnPageComponent,
     MovieDatabaseListComponent,
     CommentsComponent,
+    RatingComponent,
   
 
   ],

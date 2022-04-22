@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LoginInfo } from 'src/app/models/login-model/login-info';
+import { LoginService } from 'src/app/services/login/login.service';
 
 
 
@@ -13,10 +14,10 @@ import { LoginInfo } from 'src/app/models/login-model/login-info';
 })
 export class LoginComponent implements OnInit {
 
-  private loginUrl = 'http://localhost:8080/login/access';
+  
   isUserLoggedIn: Partial<LoginInfo> = {};
 
-  constructor( private httpClient: HttpClient ) {}
+  constructor( private httpClient: HttpClient,  private loginService : LoginService ) {}
  
 
   ngOnInit(): void {
@@ -26,7 +27,7 @@ export class LoginComponent implements OnInit {
   
  
   login(user: NgForm) {
-    this.httpClient.post<LoginInfo>(this.loginUrl, user.value).subscribe({
+    this.loginService.postLogin( user.value).subscribe({
       next: (res) => this.isUserLoggedIn = res,
       error: () => console.log('error')
     });
