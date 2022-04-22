@@ -11,6 +11,7 @@ import { OnPageComponent } from './routes/onPage/on-page/on-page.component';
 import { MovieDatabaseListComponent } from './routes/movieDatabaseList/movie-database-list/movie-database-list.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { RatingComponent } from './components/rating/rating.component';
+import { MovieApiComponent } from './components/movie-api/movie-api.component';
 
 
 
@@ -24,6 +25,7 @@ import { RatingComponent } from './components/rating/rating.component';
     MovieDatabaseListComponent,
     CommentsComponent,
     RatingComponent,
+    MovieApiComponent,
   
 
   ],
