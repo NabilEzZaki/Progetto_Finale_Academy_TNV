@@ -11,7 +11,11 @@ import { OnPageComponent } from './routes/onPage/on-page/on-page.component';
 import { MovieDatabaseListComponent } from './routes/movieDatabaseList/movie-database-list/movie-database-list.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { RatingComponent } from './components/rating/rating.component';
-import { MovieApiComponent } from './components/movie-api/movie-api.component';
+import { MovieApiNodeComponent } from './components/movie-api-node/movie-api-node.component';
+
+
+
+
 
 
 
@@ -25,7 +29,11 @@ import { MovieApiComponent } from './components/movie-api/movie-api.component';
     MovieDatabaseListComponent,
     CommentsComponent,
     RatingComponent,
-    MovieApiComponent,
+    MovieApiNodeComponent,
+  
+   
+  
+ 
   
 
   ],

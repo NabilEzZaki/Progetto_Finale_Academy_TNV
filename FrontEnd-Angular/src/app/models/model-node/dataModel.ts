@@ -13,4 +13,5 @@ export interface MovieData {
     movie_id: number;
     seen: boolean;
     must_see: boolean;
+    
 }

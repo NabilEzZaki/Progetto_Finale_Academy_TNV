@@ -20,22 +20,22 @@ export class CommentsService {
 
   
   getComments() {
-    return this.http.get<any>(this.baseURL);
+    return this.http.get<CommentsInterface>(this.baseURL);
   }
 
   getComment(id:number) {
-    return this.http.get<any>(this.baseURL + "/" + id);
+    return this.http.get<CommentsInterface>(this.baseURL + "/" + id);
   }
 
   getUserComments(id: number) {
-    return this.http.get<any>(this.baseURL + "?user-id=" + id);
+    return this.http.get<CommentsInterface>(this.baseURL + "?user-id=" + id);
   }
   
   addComment = (userId: number, movieId: number, data: CommentsInterface) => {
     return this.http.post<CommentsInterface>(this.baseURL, {
       "userId": userId,
       "movieId": movieId,
-      "body": data.body
+      "comments": data.comment
     }); 
   }
  
@@ -48,7 +48,7 @@ export class CommentsService {
       "id": data.id,
       "userId": data.userId,
       "movieId": data.movieId,
-      "body": data.body
+      "comments": data.comment
     });
   };
 }

@@ -9,18 +9,21 @@ import { movieDB } from 'src/app/models/model-node/movieDB';
   })
   export class MovieDataBase {
 
+    baseMovieDatabaseURL = ' http://localhost:5000/movies';
+
     constructor( private httpClient : HttpClient) { }
 
-    getMovieId(movie_id: number | null){
+    getMovieIdFav(movie_id: number | null){
         return this.httpClient.get<movieDB>(`http://localhost:5000/movies/${movie_id}`);
       }
-      getMoviesList(){
+      getMoviesFavList(){
         return this.httpClient.get<movieDB[]>(`http://localhost:5000/movies`);
       }
-      postMovie(movie: movieDB){
+      postMovieFav(movie: movieDB){
         return this.httpClient.post<movieDB>(`http://localhost:5000/movies`, movie);
       }
-      deleteMovie(movie_id: number | null){
+      deleteMovieFav(movie_id: number | null){
         return this.httpClient.delete<movieDB>(`http://localhost:5000/movies/${movie_id}`);
       }
+
   }

@@ -22,4 +22,14 @@
         type="text" 
     >
     <button type="submit">Create Comments</button>
+
+    <h1>Comment List</h1>
+
+<ul>
+    <li *ngFor="let comment of comments">
+        {{ comment.id}} 
+        {{ comment.movieId }}   
+        {{comment.comment}}   
+    </li>
+</ul>
   </form>

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 
-import { LoginInfo } from 'src/app/models/login-model/login-info';
+import { UserDataInterface } from 'src/app/models/login-model/login-info';
 import { RegisterInfo } from 'src/app/models/login-model/register-info';
 
 
@@ -29,8 +29,8 @@ export class LoginService {
 
   constructor(private httpClient: HttpClient) { }
 
-  postLogin(user: LoginInfo | null){
-    return this.httpClient.post<LoginInfo>('http://localhost:8080/login/access', user);
+  postLogin(user: UserDataInterface | null){
+    return this.httpClient.post<UserDataInterface>('http://localhost:8080/login/access', user);
   }
 
   }

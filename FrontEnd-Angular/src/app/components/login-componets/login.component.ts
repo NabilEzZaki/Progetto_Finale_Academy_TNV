@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { LoginInfo } from 'src/app/models/login-model/login-info';
+import { UserDataInterface } from 'src/app/models/login-model/login-info';
 import { LoginService } from 'src/app/services/login/login.service';
 
 
@@ -15,7 +15,7 @@ import { LoginService } from 'src/app/services/login/login.service';
 export class LoginComponent implements OnInit {
 
   
-  isUserLoggedIn: Partial<LoginInfo> = {};
+  isUserLoggedIn: Partial<UserDataInterface> = {};
 
   constructor( private httpClient: HttpClient,  private loginService : LoginService ) {}
  

@@ -1,14 +1,9 @@
-export interface LoginInfo {
-    id: number;
-    username: string;
-    password: string;
-    enabled : number;
-  
-  /*  constructor(id : number, username: string, password: string, enabled : number) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.enabled = enabled;
-      }
-      */
-  }
+export interface UserDataInterface{
+  id: number,
+  name: string,
+  surname: string,
+  username: string,
+  password: string,
+  email: string,
+  enabled : number
+}

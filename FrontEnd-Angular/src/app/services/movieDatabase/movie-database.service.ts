@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { MovieData } from 'src/app/models/movieModel/dataModel';
+import { MovieData } from 'src/app/models/model-node/dataModel';
 
 @Injectable({
   providedIn: 'root'
