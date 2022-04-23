@@ -13,3 +13,4 @@ export class MovieDetailComponent implements OnInit {
   }
 
 }
+
