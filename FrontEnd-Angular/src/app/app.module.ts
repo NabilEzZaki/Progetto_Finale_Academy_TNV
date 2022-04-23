@@ -11,7 +11,9 @@ import { OnPageComponent } from './routes/onPage/on-page/on-page.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { MovieFavComponent } from './components/movie-fav/movie-fav.component';
-
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
+import { CardComponent } from './components/card/card.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -28,7 +30,9 @@ import { MovieFavComponent } from './components/movie-fav/movie-fav.component';
     CommentsComponent,
     RatingComponent,
     MovieFavComponent,
-  
+    MovieDetailComponent,
+    CardComponent,
+    HomeComponent
   
    
   

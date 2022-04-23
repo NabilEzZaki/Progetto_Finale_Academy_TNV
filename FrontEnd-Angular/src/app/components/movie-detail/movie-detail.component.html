@@ -1,1 +1,18 @@
-<p>movie-detail works!</p>
+<div class="container">
+    <h1> Lista Film  </h1>
+
+    <app-card [movies]="populares"></app-card>
+    <h1>Gallery Film </h1>
+    <app-card [movies]="last"></app-card>
+    <h1>Movies </h1>
+    <app-card [movies]="child"></app-card>
+   </div>
+
+
+<div>
+<ul>
+    <li *ngFor="let movie of movies?.results">
+        {{ movie.original_title }}
+    </li>
+</ul>
+</div>

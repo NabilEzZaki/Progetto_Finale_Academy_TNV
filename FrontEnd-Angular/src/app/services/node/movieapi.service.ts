@@ -14,7 +14,7 @@ export class MoviesApiService {
     constructor( private http : HttpClient) { }
 
     getMovieList(){
-        return this.http.get<MovieData>(`https://api.themoviedb.org/3/movie/?api_key=${this.apiKey}&language=it-it`);
+        return this.http.get<MovieData[]>(`https://api.themoviedb.org/3/list/3?api_key=3949444e64e7a9355250d3b1b5c59bf1`);
     } 
 
     getMovieById(movieId:number | null){
@@ -24,6 +24,15 @@ export class MoviesApiService {
     getMovies(){
         return this.http.get<MovieData>(this.baseURL+"list/2?api_key="+this.apiKey);
     }
+
+    //https://api.themoviedb.org/3/movie/550?api_key=3949444e64e7a9355250d3b1b5c59bf1
+
+    getPopulares(){
+      //let url=`${this.urlMovieDB}/movie/550?api_key=${this.apiKey}&callback=JSONP_CALLBACK`//
+      return this.http.get<MovieData>(`https://api.themoviedb.org/3/movie/popular?api_key=3949444e64e7a9355250d3b1b5c59bf1&language=it-it&page=1`)
+     
+    }
+
 
 
 }

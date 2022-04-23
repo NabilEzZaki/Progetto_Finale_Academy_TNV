@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommentsComponent } from './components/comments/comments.component';
 import { LoginComponent } from './components/login-componets/login.component';
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { MovieFavComponent } from './components/movie-fav/movie-fav.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { OnPageComponent } from './routes/onPage/on-page/on-page.component';
@@ -15,8 +16,8 @@ const routes: Routes = [
   { path: "movie", component: CommentsComponent },
   { path: "rating", component: RatingComponent },
   { path: "movie-fav", component: MovieFavComponent},
-
-
+  { path: "movie-list", component: MovieDetailComponent},
+  
 
 ];
 
