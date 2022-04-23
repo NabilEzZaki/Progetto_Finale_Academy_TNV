@@ -8,10 +8,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login-componets/login.component';
 import { LoginPageComponent } from './routes/login-page/login-page.component';
 import { OnPageComponent } from './routes/onPage/on-page/on-page.component';
-import { MovieDatabaseListComponent } from './routes/movieDatabaseList/movie-database-list/movie-database-list.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { RatingComponent } from './components/rating/rating.component';
-import { MovieApiNodeComponent } from './components/movie-api-node/movie-api-node.component';
+import { MovieFavComponent } from './components/movie-fav/movie-fav.component';
 
 
 
@@ -26,10 +25,10 @@ import { MovieApiNodeComponent } from './components/movie-api-node/movie-api-nod
     LoginComponent,
     LoginPageComponent,
     OnPageComponent,
-    MovieDatabaseListComponent,
     CommentsComponent,
     RatingComponent,
-    MovieApiNodeComponent,
+    MovieFavComponent,
+  
   
    
   

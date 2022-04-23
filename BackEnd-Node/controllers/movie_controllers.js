@@ -1,25 +1,25 @@
 import movie from "../models/movie.js";
 
 
-export const getMovies = async (req, res) => {
+export const getMoviesFavorite = async (req, res) => {
     try {
-        const movie = await movie.findAll();
-        res.send(movie);
+        const movies = await movie.findAll();
+        res.send(movies);
     } catch (err) {
         console.log(err);
     }
 }
 
-export const getMovieById = async (req, res) => {
+export const getMoviesFavoriteById = async (req, res) => {
     try {
-        const movie = await movie.findOne({
+        const movies = await movie.findOne({
             where: {
                 id: req.params.id
             }
         });
         
-        if (movie) {
-            res.send(movie);
+        if (movies) {
+            res.send(movies);
         } else {
             res.sendStatus(404);
         }
@@ -29,7 +29,7 @@ export const getMovieById = async (req, res) => {
     }
 }
 
-export const createMovie = async (req, res) => {
+export const createMoviesFavorite  = async (req, res) => {
     try {
         await movie.create(req.body);
         res.json({
@@ -41,7 +41,7 @@ export const createMovie = async (req, res) => {
     }
 }
 
-export const updateMovie = async (req, res) => {
+export const updateMoviesFavorite  = async (req, res) => {
     try {
         await movie.update(req.body, {
             where: {
@@ -57,7 +57,7 @@ export const updateMovie = async (req, res) => {
     }
 }
 
-export const deleteMovie = async (req, res) => {
+export const deleteMoviesFavorite  = async (req, res) => {
     try {
         await movie.destroy({
             where: {
