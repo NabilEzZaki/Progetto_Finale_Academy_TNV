@@ -1,6 +1,6 @@
 <div class="container">
-    <h1> Lista Film  </h1>
 
+    <h1> Lista Film  </h1>
     <app-card [movies]="populares"></app-card>
     <h1>Gallery Film </h1>
     <app-card [movies]="last"></app-card>
@@ -8,11 +8,31 @@
     <app-card [movies]="child"></app-card>
    </div>
 
+   <div class="row ">
+    <div class="col-md-6">
+      <div class="poster_container">
+        
+        <ul>
+            <li *ngFor="let movies of movies?.results">
+               <h2>{{ movies.original_title }}</h2> 
+                {{ movies.poster_path }}
+            </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div>
+     
+        
+
+
+
 
 <div>
 <ul>
-    <li *ngFor="let movie of movies?.results">
-        {{ movie.original_title }}
+    <li *ngFor="let movies of movies?.results">
+        {{ movies.original_title }}
+        {{ movies.poster_path }}
     </li>
 </ul>
 </div>

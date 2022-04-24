@@ -33,6 +33,15 @@ export class MoviesApiService {
      
     }
 
+    searchMovie(movie:string){
+     /* let url=`${this.urlMovieDB}/search/movie?api_key=${this.apiKey}&language=es&query=
+      ${movie}&page=1&callback=JSONP_CALLBACK`
+       return this.jsonp.get(url).pipe(map(res=>res.json()))*/
+
+       return this.http.get<MovieData>(`https://api.themoviedb.org/3/search/movie?api_key=3949444e64e7a9355250d3b1b5c59bf1&language=it-it&query=${movie}`)
+    }
+  
+
 
 
 }

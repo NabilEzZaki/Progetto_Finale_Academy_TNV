@@ -50,7 +50,8 @@ export class MovieDetailComponent implements OnInit {
         })
         
       }
-     
+     */
+
        fechaHaceDiasDeHoy(dias:number){
        let hoy=new Date(); 
        let diasMilisegundos = 1000 * 60 * 60 * 24 *dias;
@@ -58,7 +59,7 @@ export class MovieDetailComponent implements OnInit {
        return new Date(fechaPasada)
        }
 
-*/
+
 
   }
 

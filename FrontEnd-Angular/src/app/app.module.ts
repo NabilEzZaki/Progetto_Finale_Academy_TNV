@@ -14,6 +14,7 @@ import { MovieFavComponent } from './components/movie-fav/movie-fav.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { CardComponent } from './components/card/card.component';
 import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
@@ -32,7 +33,8 @@ import { HomeComponent } from './components/home/home.component';
     MovieFavComponent,
     MovieDetailComponent,
     CardComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent
   
    
   
