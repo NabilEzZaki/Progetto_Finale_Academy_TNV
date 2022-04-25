@@ -11,28 +11,14 @@ import { MoviesApiService } from 'src/app/services/node/movieapi.service';
 })
 export class HomeComponent implements OnInit {
  
-  movies : MovieData | null = null;
-  populares:any[]=[];
-  last:any[]=[];
-  child:any[]=[];
 
-  constructor(private httpClient: HttpClient, private serviceApi : MoviesApiService) {  }
+
+  constructor() {  }
 
 
  ngOnInit(): void {
-      this.serviceApi.getMoviePopulares().subscribe(
-        {
-          next : (res) => this.movies = res
-          
-        }
-      );
+      
   }
-  fechaHaceDiasDeHoy(dias:number){
-    let hoy=new Date(); 
-    let diasMilisegundos = 1000 * 80 * 80 * 64 *dias;
-    let fechaPasada=hoy.getTime()-diasMilisegundos;
-    return new Date(fechaPasada)
-    }
-
+ 
 
 }
