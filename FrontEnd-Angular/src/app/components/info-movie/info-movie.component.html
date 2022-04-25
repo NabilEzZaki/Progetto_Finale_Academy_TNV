@@ -1,4 +1,5 @@
-<div class="container">
+<!--
+  <div class="container">
     <div  *ngFor="let movies of movies?.result">
         <h1 class="display-4">{{movies.title}}</h1>
         <img  *ngIf="movies.poster_path" class="card-img-top" src="https://image.tmdb.org/t/p/original{{movies.poster_path}}" alt="Card image cap">
@@ -8,5 +9,20 @@
          <p class="lead">
          <a class="btn btn-primary btn-lg" (click)="goBack()" role="button">Come Back</a>
          </p>
+  </div>
+</div>
+-->
+
+<div class="container">
+  <div class="row row-cols-3"> 
+  <h1 class="display-4">{{movie.title}}</h1>
+  <img  *ngIf="movie.poster_path" class="card-img-top" src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="Card image cap">
+  <img class="card-img-top"  *ngIf="!movie.poster_path" src="https://www.genesisglobalschool.edu.in/wp-content/uploads/2016/09/noimage.jpg" alt="Card image cap">
+  
+  <hr class="my-4">
+  <p>{{movie.overview}}</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" (click)="goBack()" role="button">Back</a>
+  </p>
   </div>
 </div>
