@@ -1,14 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand"  [routerLink]="['/home']">MovieApp <i class="fas fa-video"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto ">
+      <li class="nav-item ">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/home']">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/search']">Search</a>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0" (ngSubmit)="searchMovie(buscarTxt.value)">
+      <input class="form-control mr-sm-5" type="search" placeholder="Search" aria-label="Search" #buscarTxt>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 
 <div class="container">
   <div class="row row-cols-3">
     <div *ngFor="let movies of movies?.results">
+      
           <img *ngIf="movies.poster_path" src="https://image.tmdb.org/t/p/w500{{movies.poster_path}}" class="card-img-top" alt={{movies.title}}>
           <img *ngIf="!movies.poster_path" src="https://www.genesisglobalschool.edu.in/wp-content/uploads/2016/09/noimage.jpg" class="card-img-top " >
           <div class="card-body">
             <h5 class="card-title">{{movies.title}}</h5>
+            <p>{{movies.overview}}</p>
+            
             <button class="btn btn-info btn-block "[routerLink]="['/info-movie', movies.id]">
-            detail
+                Comments
             </button>
+            <button class="btn btn-info btn-block "[routerLink]="['/rating']">
+                 rating
+            </button>
+
         </div>
       </div>
     </div>

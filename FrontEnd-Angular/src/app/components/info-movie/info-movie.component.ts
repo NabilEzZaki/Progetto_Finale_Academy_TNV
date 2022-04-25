@@ -11,12 +11,18 @@ import { MovieData } from 'src/app/models/model-node/dataModel';
 })
 export class InfoMovieComponent implements OnInit {
 
-  movies:any = {};
-  movieId: number | null = null;  
+  @Input() movies:any;
+  movieId: number | null = null;
+  MoviebyId: any = {};
   isReady=false;
-  constructor( Route: ActivatedRoute, private movieService: MoviesApiService, private location: Location ) {Route.params.subscribe(val => {
-   this.movieId = val['movieId'];
-  }); 
+  constructor( private route: ActivatedRoute, private movieService: MoviesApiService, private location: Location ) 
+  {
+    this.route.params.subscribe(val => {
+        this.movieService.getMovieById(val['movieId']).subscribe(movie =>{
+          this.movies= movie;
+        })
+        //this.movieId = val['movieId'];
+    }); 
 }
 
   
@@ -24,13 +30,16 @@ export class InfoMovieComponent implements OnInit {
     this.location.back();
   }
   ngOnInit(): void {
-    this.getMovie();
-  }
-
+   // this.getMovie()
+   }
+  
+/*
   getMovie(){
   this.movieService.getMovieById(this.movieId).subscribe(
     {
       next: (res) => this.movies = res      
     });
   }
+  */
 }
+

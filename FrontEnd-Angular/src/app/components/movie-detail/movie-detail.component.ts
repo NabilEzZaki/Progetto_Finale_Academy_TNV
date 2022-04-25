@@ -1,6 +1,7 @@
 import { DatePipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MovieData } from 'src/app/models/model-node/dataModel';
 import { MoviesApiService } from 'src/app/services/node/movieapi.service';
 import { MovieDataBase } from 'src/app/services/node/moviedatabase';
@@ -17,12 +18,7 @@ export class MovieDetailComponent implements OnInit {
   //movies : MovieData | null = null;
   movieId: number=25;
   isVisible: boolean = true;
-
-  populares:any[]=[];
-  last:any[]=[];
-  child:any[]=[];
-
-  constructor(private httpClient: HttpClient, private serviceApi : MoviesApiService) {  }
+  constructor(private httpClient: HttpClient, private serviceApi : MoviesApiService, private router: Router) {  }
 
  
   ngOnInit(): void {
@@ -33,7 +29,6 @@ export class MovieDetailComponent implements OnInit {
         }
       );
   }
-
        fechaHaceDiasDeHoy(dias:number){
        let hoy=new Date(); 
        let diasMilisegundos = 1000 * 80 * 80 * 64 *dias;
@@ -41,7 +36,14 @@ export class MovieDetailComponent implements OnInit {
        return new Date(fechaPasada)
        }
 
-
+       searchMovie(movieTxt : string){
+        if(movieTxt.length ==0){
+          return;
+        }
+        console.log(movieTxt)
+        this.router.navigate(['search', movieTxt])
+      }
+    
 
   }
 
