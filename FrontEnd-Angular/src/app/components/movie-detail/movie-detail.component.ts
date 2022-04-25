@@ -1,6 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MovieData } from 'src/app/models/model-node/dataModel';
 import { MoviesApiService } from 'src/app/services/node/movieapi.service';
 import { MovieDataBase } from 'src/app/services/node/moviedatabase';
@@ -10,9 +10,11 @@ import { MovieDataBase } from 'src/app/services/node/moviedatabase';
   templateUrl: './movie-detail.component.html',
   styleUrls: ['./movie-detail.component.scss']
 })
+
 export class MovieDetailComponent implements OnInit {
 
-  movies : MovieData | null = null;
+  @Input() movies:any;
+  //movies : MovieData | null = null;
   movieId: number=25;
   isVisible: boolean = true;
 
@@ -20,28 +22,20 @@ export class MovieDetailComponent implements OnInit {
   last:any[]=[];
   child:any[]=[];
 
-  constructor(private httpClient: HttpClient, private serviceApi : MoviesApiService) { 
-    //this.popularMovies();
- 
-   }
+  constructor(private httpClient: HttpClient, private serviceApi : MoviesApiService) {  }
 
  
   ngOnInit(): void {
-/*
-    this.serviceApi.getMovieList().subscribe(
-      {
-        next: (res) => this.movies = res      
-      });
-*/
-      this.serviceApi.getPopulares().subscribe(
+      this.serviceApi.getMoviePopulares().subscribe(
         {
           next : (res) => this.movies = res
-
+          
         }
       );
-      }
+  }
 
 /*
+
       popularMovies(){
         this.serviceApi.getPopulares().subscribe(
         {
@@ -54,7 +48,7 @@ export class MovieDetailComponent implements OnInit {
 
        fechaHaceDiasDeHoy(dias:number){
        let hoy=new Date(); 
-       let diasMilisegundos = 1000 * 60 * 60 * 24 *dias;
+       let diasMilisegundos = 1000 * 80 * 80 * 64 *dias;
        let fechaPasada=hoy.getTime()-diasMilisegundos;
        return new Date(fechaPasada)
        }

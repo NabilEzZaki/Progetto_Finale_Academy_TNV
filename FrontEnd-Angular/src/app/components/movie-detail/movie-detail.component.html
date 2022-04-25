@@ -1,38 +1,17 @@
+
+
 <div class="container">
-
-    <h1> Lista Film  </h1>
-    <app-card [movies]="populares"></app-card>
-    <h1>Gallery Film </h1>
-    <app-card [movies]="last"></app-card>
-    <h1>Movies </h1>
-    <app-card [movies]="child"></app-card>
-   </div>
-
-   <div class="row ">
-    <div class="col-md-6">
-      <div class="poster_container">
-        
-        <ul>
-            <li *ngFor="let movies of movies?.results">
-               <h2>{{ movies.original_title }}</h2> 
-                {{ movies.poster_path }}
-            </li>
-        </ul>
+  <div class="row row-cols-3">
+    <div *ngFor="let movies of movies?.results">
+          <img *ngIf="movies.poster_path" src="https://image.tmdb.org/t/p/w500{{movies.poster_path}}" class="card-img-top" alt={{movies.title}}>
+          <img *ngIf="!movies.poster_path" src="https://www.genesisglobalschool.edu.in/wp-content/uploads/2016/09/noimage.jpg" class="card-img-top " >
+          <div class="card-body">
+            <h5 class="card-title">{{movies.title}}</h5>
+            <button class="btn btn-info btn-block "[routerLink]="['/',movies.id]">
+            detail
+            </button>
+        </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <div>
-     
-        
 
-
-
-
-<div>
-<ul>
-    <li *ngFor="let movies of movies?.results">
-        {{ movies.original_title }}
-        {{ movies.poster_path }}
-    </li>
-</ul>
-</div>
+  </div>
