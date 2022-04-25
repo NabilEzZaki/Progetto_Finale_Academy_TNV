@@ -14,15 +14,22 @@
 -->
 
 <div class="container">
-  <div class="row row-cols-3"> 
-  <h1 class="display-4">{{movie.title}}</h1>
-  <img  *ngIf="movie.poster_path" class="card-img-top" src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="Card image cap">
-  <img class="card-img-top"  *ngIf="!movie.poster_path" src="https://www.genesisglobalschool.edu.in/wp-content/uploads/2016/09/noimage.jpg" alt="Card image cap">
-  
-  <hr class="my-4">
-  <p>{{movie.overview}}</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" (click)="goBack()" role="button">Back</a>
-  </p>
+  <div class="card mb-3" style="max-width: 940px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+          <h1 class="display-4">{{movie.title}}</h1>
+          <img  *ngIf="movie.poster_path" class="card-img-top" src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="Card image cap">
+          <img class="card-img-top"  *ngIf="!movie.poster_path" src="https://www.genesisglobalschool.edu.in/wp-content/uploads/2016/09/noimage.jpg" alt="Card image cap">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body"> 
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">{{movie.overview}}</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      <p class="lead">
+      <a class="btn btn-primary btn-lg" (click)="goBack()" role="button">Back</a>
+    </p>
   </div>
 </div>
+

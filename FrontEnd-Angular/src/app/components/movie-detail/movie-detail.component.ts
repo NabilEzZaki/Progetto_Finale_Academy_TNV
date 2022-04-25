@@ -14,9 +14,9 @@ import { MovieDataBase } from 'src/app/services/node/moviedatabase';
 
 export class MovieDetailComponent implements OnInit {
 
-  @Input() movies:any;
-  //movies : MovieData | null = null;
-  movieId: number=25;
+  //movies:any;
+  movies : MovieData | null = null;
+  movieVote : any;
   isVisible: boolean = true;
   constructor(private httpClient: HttpClient, private serviceApi : MoviesApiService, private router: Router) {  }
 
@@ -28,6 +28,11 @@ export class MovieDetailComponent implements OnInit {
           
         }
       );
+
+
+      this.serviceApi.getMovieByVote().subscribe({
+        next : (res) => this.movieVote = res
+      })
   }
        fechaHaceDiasDeHoy(dias:number){
        let hoy=new Date(); 
@@ -44,6 +49,7 @@ export class MovieDetailComponent implements OnInit {
         this.router.navigate(['search', movieTxt])
       }
     
+
 
   }
 

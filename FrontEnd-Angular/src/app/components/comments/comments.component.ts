@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class CommentsComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, ) { }
 
   ngOnInit(): void {
   }
@@ -20,5 +20,7 @@ export class CommentsComponent implements OnInit {
       error: () => console.log('error')
     });
   }
+
+
 
 }
