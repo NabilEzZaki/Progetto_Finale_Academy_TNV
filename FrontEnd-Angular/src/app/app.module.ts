@@ -15,6 +15,7 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
 import { CardComponent } from './components/card/card.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { InfoMovieComponent } from './components/info-movie/info-movie.component';
 
 
 
@@ -34,7 +35,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MovieDetailComponent,
     CardComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    InfoMovieComponent
   
    
   

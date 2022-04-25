@@ -34,18 +34,6 @@ export class MovieDetailComponent implements OnInit {
       );
   }
 
-/*
-
-      popularMovies(){
-        this.serviceApi.getPopulares().subscribe(
-        {
-          next : (res) => this.populares = res
-          //this.populares=resp;
-        })
-        
-      }
-     */
-
        fechaHaceDiasDeHoy(dias:number){
        let hoy=new Date(); 
        let diasMilisegundos = 1000 * 80 * 80 * 64 *dias;

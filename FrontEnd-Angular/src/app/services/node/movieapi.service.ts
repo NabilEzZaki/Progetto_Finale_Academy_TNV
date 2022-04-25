@@ -18,7 +18,7 @@ export class MoviesApiService {
     } 
 
     getMovieById(movieId:number | null){
-      return this.http.get<MovieData>(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${this.apiKey}&language=it-it`);
+      return this.http.get<MovieData>(`https://api.themoviedb.org/3/movie/${movieId}?api_key=3949444e64e7a9355250d3b1b5c59bf1&language=it-it`);
     }
 
     getMovies(poster_path: string | null){
