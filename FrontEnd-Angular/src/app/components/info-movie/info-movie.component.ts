@@ -11,21 +11,18 @@ import { MovieData } from 'src/app/models/model-node/dataModel';
 })
 export class InfoMovieComponent implements OnInit {
 
-  @Input() movies:any;
-  movieId: number | null = null;
-  MoviebyId: any = {};
-  isReady=false;
+  movie: any = {};
+
   constructor( private route: ActivatedRoute, private movieService: MoviesApiService, private location: Location ) 
   {
-    this.route.params.subscribe(val => {
-        this.movieService.getMovieById(val['movieId']).subscribe(movie =>{
-          this.movies= movie;
+    this.route.params.subscribe(res => {
+        this.movieService.getMovieById(res['id']).subscribe(mov =>{
+          this.movie= mov;
         })
         //this.movieId = val['movieId'];
     }); 
-}
+  }
 
-  
   goBack() {
     this.location.back();
   }
