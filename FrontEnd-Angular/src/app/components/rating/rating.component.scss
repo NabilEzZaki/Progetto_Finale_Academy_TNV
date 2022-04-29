@@ -2,3 +2,24 @@
     color:darkturquoise;
     font-size: 20px;
 }
+
+body {
+    background-color: rgb(28, 28, 28);
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+.container {
+    display: flex;
+    height: 100vh;
+    
+  }
+
+.sfondo {
+    flex: 1;
+    transition: 1s;
+    background-size: 100% 110%;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-image: url("../rating/movie.jpeg");
+  }
